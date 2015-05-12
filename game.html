@@ -6,20 +6,19 @@
 //Try and guess my favorite food and how often I eat it.//
 //Variables and Inputs.//
 // "t" stands for type and "a" stands for age.
-  var guess_1, guess_2, guess_3, guess_4, answer_a, answer_b, answer_t, message;
-  answer_t = ("PIZZA")
-  answer_a = 27
-  answer_b = ("ISSAQUAH")
+  var guess_1, guess_2, guess_3, answer_a, answer_t, message;
+  answer_t = ("PIZZA")//semicolon
+  answer_a = 27//semicolon
 
 
 //Food type Guess 1  - basic if statement//
   guess_1 = prompt("Hey! Lunch time. What's my favorite food?");
-  if (guess_1.toUpperCase() == answer_t
+  if (guess_1.toUpperCase() == answer_t//good, you used toUpperCase
 ) {
     message = "Wow you are good!";
 
 //Food Type Guess 2 - which is placed inside the esle statement //
-  } else {guess_2 = prompt("Try again! I\'ll give you a hint. It\'s round.");
+  } else {guess_2 = prompt("Try again! I'\ll give you a hint. It\'s round.");//escape on wrong side of character
       if (guess_2.toUpperCase() == answer_t
     ){
       message = "Yay, you got it!";
@@ -31,25 +30,15 @@
   alert(message);
 
   // My age Guess//
-  guess_3 = prompt("Now guess how old I am!")
-    if (guess_3 < answer_a){
-    message = "Wrong! Not all pizza is served at Chuck e Cheese! Game over, no pizza for you.";
-}     else if (guess_3 == answer_a){
-      message = "Great Job! Pizza is for all ages! Want some pizza?";
+guess_3 = prompt("Now guess how old I am!")//semicolon
+if (guess_3 < answer_a){
+  message = "Wrong! Not all pizza is served at Chuck e Cheese! Game over, no pizza for you.";
+} else if (guess_3 == answer_a){
+  message = "Great Job! Pizza is for all ages! Want some pizza?";
 }
-  else
-  {
+else{
   message= "Wrong. Pizza and dentures don\'t really work. Sorry, game over."
-  }
-  alert(message);
-  //Where am I from?//
-    guess_4 = prompt ("Finally where am I from?")
- if (guess_4.toUpperCase()==answer_b) 
-{
-  message = ("Best city Ever")
 }
- else {
-  message = ("The force is not strong with you")
-      }
   alert(message);
-  </script>
+
+</script>
