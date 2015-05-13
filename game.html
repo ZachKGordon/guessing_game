@@ -4,34 +4,65 @@
 
 <script type="text/javascript">
 
-// "t" for type, "a" for age, "h" for team
-  var guess_1, guess_2, guess_3, guess_4, answer_a, answer_h, answer_t, message;
-  answer_t = ("PIZZA");
-  answer_a = 27;
-  answer_h = ("ISSAQUAH");
+function Game(food, age, town) {
+  this.favoriteFood = food;
+  this.age = age;
+  this.hometown = town;
+}
 
-  guess_1 = prompt("Hey! Lunch time. What's my favorite food?");
+var zach = new Game("PIZZA", 27, "ISSAQUAH");
+
+function Food(guess) {
+  this.guess = guess;
+  this.guess_2 ="";
+  this.foodtype = function() {
+    if (this.guess.toUpperCase() == zach.favoriteFood) {
+      message = "Wow you are good!";
+    }
+    else {
+      this.guess_2 = prompt("Try again! I\'ll give you a hint. It\'s round.");
+      if (this.guess_2.toUpperCase() == zach.favoriteFood) {
+        message = "Yay, you got it!";
+      }
+      else {
+        message = "Nope, sorry. It was pizza.";
+      }
+    }
+    alert(message);
+  }
+}
+
+var food = new Food(prompt("Hey! Lunch time. What's my favorite food?"));
+food.foodtype();
+
+// "t" for type, "a" for age, "h" for home
+  var guess_1, guess_2, guess_3, guess_4, /*answer_a, answer_h, answer_t, */message;
+  //answer_t = ("PIZZA");
+  //answer_a = 27;
+  //answer_h = ("ISSAQUAH");
+
+  /*guess_1 = prompt("Hey! Lunch time. What's my favorite food?");
 
 //Food type Guess//
-  if (guess_1.toUpperCase() == answer_t) {
+  if (guess_1.toUpperCase() == zach.favoriteFood) {
     message = "Wow you are good!";
   }
   else {guess_2 = prompt("Try again! I\'ll give you a hint. It\'s round.");
-      if (guess_2.toUpperCase() == answer_t){
+      if (guess_2.toUpperCase() == zach.favoriteFood) {
         message = "Yay, you got it!";
       }
       else{
         message = "Nope, sorry. It was pizza.";
       }
   }
-  alert(message);
+  alert(message);*/
 
 // My age Guess//
   guess_3 = prompt("Now guess how old I am!")
-  if (guess_3 < answer_a){
+  if (guess_3 < zach.age){
     message = "Wrong! Not all pizza is served at Chuck e Cheese! Game over, no pizza for you.";
   }
-  else if (guess_3 == answer_a){
+  else if (guess_3 == zach.age){
     message = "Great Job! Pizza is for all ages! Want some pizza?";
   }
   else { message= "Wrong. Pizza and dentures don\'t really work. Sorry, game over."
@@ -40,7 +71,7 @@
 
 //My home town guess//
   guess_4 = prompt("Finally where am I from?");
-  if (guess_4.toUpperCase()==answer_h){
+  if (guess_4.toUpperCase()==zach.hometown){
     message = ("Best city Ever");
   }
  else {message = ("The force is not strong with you");
