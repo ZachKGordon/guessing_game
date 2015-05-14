@@ -1,7 +1,3 @@
-// Zach Gordon //
-// 5_11_2015 //
-// Favorite Food Game//
-
 <script type="text/javascript">
 
 function Game(food, age, town) {
@@ -36,28 +32,8 @@ var food = new Food(prompt("Hey! Lunch time. What's my favorite food?"));
 food.foodtype();
 
 // "t" for type, "a" for age, "h" for home
-  var guess_1, guess_2, guess_3, guess_4, /*answer_a, answer_h, answer_t, */message;
-  //answer_t = ("PIZZA");
-  //answer_a = 27;
-  //answer_h = ("ISSAQUAH");
+  var guess_1, guess_2, guess_3, guess_4, message;
 
-  /*guess_1 = prompt("Hey! Lunch time. What's my favorite food?");
-
-//Food type Guess//
-  if (guess_1.toUpperCase() == zach.favoriteFood) {
-    message = "Wow you are good!";
-  }
-  else {guess_2 = prompt("Try again! I\'ll give you a hint. It\'s round.");
-      if (guess_2.toUpperCase() == zach.favoriteFood) {
-        message = "Yay, you got it!";
-      }
-      else{
-        message = "Nope, sorry. It was pizza.";
-      }
-  }
-  alert(message);*/
-
-// My age Guess//
   guess_3 = prompt("Now guess how old I am!")
   if (guess_3 < zach.age){
     message = "Wrong! Not all pizza is served at Chuck e Cheese! Game over, no pizza for you.";
@@ -77,5 +53,7 @@ food.foodtype();
  else {message = ("The force is not strong with you");
   }
   alert(message);
+
+  console.log(zach)
 
   </script>
