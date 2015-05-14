@@ -1,0 +1,44 @@
+<script type="text/javascript">
+var message
+
+  function customer(guess1, guess2, guess3) {
+    this.guess1 = guess1;
+    this.guess2 = guess2;
+    this.guess3 = guess3;
+  }
+
+  function menu(aperitivo, primo, dolce) {
+    this.aperitivo = aperitivo;
+    this.secondo = primo;
+    this.dolce = dolce;
+  }
+
+  var start = confirm("Lunch time! Would you like to guess the PEACH menu for today?");
+  if (start !== false) {
+
+    var user = new customer(
+      prompt("What's to drink? Water, juice, or whiskey?"),
+      prompt("What's the entree? Burger, burrito, or pizza?"),
+      prompt("Finally what's for dessert? Cake, cookie, or coffee?")
+    );
+
+    var meal = new menu("WHISKEY", "PIZZA", "COFFEE");
+
+    if (user.guess1.toUpperCase() !== meal.aperitivo) {
+      alert("Oops, sorry. Wrong drink");
+    } else {
+      alert("Yay! You picked the right drink, whiskey!");
+    }
+    if (user.guess2.toUpperCase() !== meal.secondo) {
+      alert("Oops, sorry. Wrong entree");
+    } else {
+      alert("Yum! Pizza was right, I hope it's stuffed crust!");
+    }
+    if (user.guess3.toUpperCase() !== meal.dolce) {
+      alert("Oh no! You picked the wrong dessert. Sorry, game over and lunch has ended.");
+    } else {
+      alert("Cool, coffee is right! Time to get that digestion started.");
+    }
+  }
+
+</script>
