@@ -1,3 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title> Pear Menu Game </title>
+  </Head>
+  <body>
+    <h1><img src="http://upload.wikimedia.org/wikipedia/commons/b/b7/Public_Domain_Pear_Drawing.jpg" width = 75, height = 75/>
+
+      Pear - The True Hunger Games
+
+    <img src="http://upload.wikimedia.org/wikipedia/commons/b/b7/Public_Domain_Pear_Drawing.jpg" width = 75, height = 75/></h1>
+    <p>Pear is a cutting edge food game company that awards customers lunch free of charge. But only if they can guess the menu items. Are you up for the challenge? </p>
+    <h2> Menu</h2>
+    <ol>
+      <li>Beverage</li>
+        <ul>
+          <li>Water</li>
+          <li>Juice</li>
+          <li>Whiskey</li>
+        </ul>
+      <li>Entree</li>
+        <ul>
+          <li>Burger</li>
+          <li>Burrito</li>
+          <li>Pizza</li>
+        </ul>
+      <li>Dessert</li>
+        <ul>
+          <li>Cake</li>
+          <li>Cookie</li>
+          <li>Mocha</li>
+        </ul>
+    </ol>
+    <p><a href="http://en.wikipedia.org/wiki/Foodborne_illness">Thanks for playing. All guesses are final and Pear is not held responsible for anything.</a></p>
+  </body>
+</html>
+
 <script type="text/javascript">
 var message
 
@@ -13,32 +50,33 @@ var message
     this.dolce = dolce;
   }
 
-  var start = confirm("Lunch time! Would you like to guess the PEACH menu for today?");
+  var start = confirm("Lunch time! Would you like to guess the Pear menu for today?");
   if (start !== false) {
 
     var user = new customer(
       prompt("What's to drink? Water, juice, or whiskey?"),
       prompt("What's the entree? Burger, burrito, or pizza?"),
-      prompt("Finally what's for dessert? Cake, cookie, or coffee?")
+      prompt("Finally what's for dessert? Cake, cookie, or mocha?")
     );
 
-    var meal = new menu("WHISKEY", "PIZZA", "COFFEE");
+    var meal = new menu("WHISKEY", "PIZZA", "MOCHA");
 
     if (user.guess1.toUpperCase() !== meal.aperitivo) {
-      alert("Oops, sorry. Wrong drink");
+      alert("Sorry, " + user.guess1 + " was wrong. No drink for you.");
     } else {
       alert("Yay! You picked the right drink, whiskey!");
     }
     if (user.guess2.toUpperCase() !== meal.secondo) {
-      alert("Oops, sorry. Wrong entree");
+      alert("Nice try but, " + user.guess2 + " was wrong. No main course.");
     } else {
-      alert("Yum! Pizza was right, I hope it's stuffed crust!");
+      alert("Yum! " + user.guess2 + " was right!");
     }
     if (user.guess3.toUpperCase() !== meal.dolce) {
-      alert("Oh no! You picked the wrong dessert. Sorry, game over and lunch has ended.");
+      alert("Oh no! " + user.guess3 + " was wrong. No sweets for you.");
     } else {
-      alert("Cool, coffee is right! Time to get that digestion started.");
+      alert("Cool, " + user.guess3 + " is right!");
     }
+      alert("The items you guessed correctly will arrive shortly.")
   }
 
 </script>
