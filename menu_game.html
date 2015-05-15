@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+ <script src="menu_game.js"></script>
   <head>
     <title> Pear Menu Game </title>
     <meta charset="utf-8">
@@ -18,67 +19,35 @@
         <ul>
           <li>Water</li>
           <li>Juice</li>
-          <li>Whiskey</li>
+          <li id = "answer1">Whiskey</li>
         </ul>
+        <label for = "item_input1"> Beverage Choice: <label>
+        <input id = "item_input1" type = "text"></input>
+        <button type = "button" id = "submit1"> Submit</button>
+        <div id="today1"> </div>
       <li>Entree</li>
         <ul>
           <li>Burger</li>
           <li>Burrito</li>
           <li>Pizza</li>
         </ul>
+        <label for = "item_input2"> Entree Choice: <label>
+        <input id = "item_input2" type = "text"></input>
+        <button type = "button" id = "submit2"> Submit </button>
+        <div id="today2"> </div>
       <li>Dessert</li>
         <ul>
           <li>Cake</li>
           <li>Cookie</li>
           <li>Mocha</li>
         </ul>
+        <label for = "item_input3"> Dessert Choice: <label>
+        <input id = "item_input3" type = "text"></input>
+        <button type = "button" id = "submit3"> Submit</button>
+        <div id="today3"> </div>
     </ol>
-    <p><a href="http://en.wikipedia.org/wiki/Foodborne_illness">Thanks for playing. All guesses are final and Pear is not held responsible for anything.</a></p>
-    <script type="text/javascript">
-  window.onload = function() {
-    function customer (guess1, guess2, guess3) {
-    this.guess1 = guess1;
-    this.guess2 = guess2;
-    this.guess3 = guess3;
-  }
-
-    function menu (aperitivo, primo, dolce) {
-    this.aperitivo = aperitivo;
-    this.secondo = primo;
-    this.dolce = dolce;
-  }
-
-  var start = confirm("Lunch time! Would you like to guess the Pear menu for today?");
-  if (start == true) {
-
-    var user = new customer(
-      prompt("What's to drink? Water, juice, or whiskey?"),
-      prompt("What's the entree? Burger, burrito, or pizza?"),
-      prompt("Finally what's for dessert? Cake, cookie, or mocha?")
-    );
-
-    var meal = new menu("WHISKEY", "PIZZA", "MOCHA");
-
-    if (user.guess1.toUpperCase() !== meal.aperitivo) {
-      alert("Sorry, " + user.guess1 + " was wrong. No drink for you.");
-    } else {
-      alert("Yay! You picked the right drink, whiskey!");
-    }
-    if (user.guess2.toUpperCase() !== meal.secondo) {
-      alert("Nice try but, " + user.guess2 + " was wrong. No main course.");
-    } else {
-      alert("Yum! " + user.guess2 + " was right!");
-    }
-    if (user.guess3.toUpperCase() !== meal.dolce) {
-      alert("Oh no! " + user.guess3 + " was wrong. No sweets for you.");
-    } else {
-      alert("Cool, " + user.guess3 + " is right!");
-    }
-      alert("The items you guessed correctly will arrive shortly.")
-  }
-}
-</script>
-
+    <p><a href="http://en.wikipedia.org/wiki/Foodborne_illness">Thanks for playing. All guesses are final and Pear is not held responsible
+    for anything.</a></p>
   </body>
 </html>
 
