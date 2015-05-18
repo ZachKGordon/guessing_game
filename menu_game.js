@@ -1,4 +1,4 @@
-  window.onload = function() {
+window.onload = function() {
 
   var meal = new menu("WHISKEY", "PIZZA", "MOCHA");
 
@@ -19,8 +19,8 @@
   });
 
 
-var compare = function(){
-if (input1.value.toUpperCase() !== meal.aperitivo) {
+  var compare = function(){
+    if (input1.value.toUpperCase() !== meal.aperitivo) {
       elToday1.textContent= "Sorry, " + input1.value + " was wrong. No drink for you.";
     } else {
       elToday1.textContent = "Yay! You picked the right drink, whiskey!";
@@ -35,25 +35,24 @@ if (input1.value.toUpperCase() !== meal.aperitivo) {
     } else {
       elToday3.textContent = "Cool, " + input3.value + " is right!";
     }
-    alert("The items you guessed correctly will arrive shortly.");
-}
-    function customer (guess1, guess2, guess3) {
+      alert("The items you guessed correctly will arrive shortly.");
+  }
+  function customer (guess1, guess2, guess3) {
     this.guess1 = guess1;
     this.guess2 = guess2;
     this.guess3 = guess3;
   }
 
-    function menu (aperitivo, primo, dolce) {
+  function menu (aperitivo, primo, dolce) {
     this.aperitivo = aperitivo;
     this.secondo = primo;
     this.dolce = dolce;
   }
-
-    /*var user = new customer(
-      prompt("What's to drink? Water, juice, or whiskey?"),
-      prompt("What's the entree? Burger, burrito, or pizza?"),
-      prompt("Finally what's for dessert? Cake, cookie, or mocha?")
-    );*/
-
-    }
+      /*var user = new customer(
+        prompt("What's to drink? Water, juice, or whiskey?"),
+        prompt("What's the entree? Burger, burrito, or pizza?"),
+        prompt("Finally what's for dessert? Cake, cookie, or mocha?")
+      );*/
   }
+}
+
